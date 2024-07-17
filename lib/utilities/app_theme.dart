@@ -23,7 +23,18 @@ class AppTheme {
     textTheme: const TextTheme(
       bodyLarge: TextStyle(
         fontFamily: AppText.fontRegular,
+        color: AppColor.colorPrimary,
         fontSize: 15,
+      ),
+      titleLarge: TextStyle(
+        fontFamily: AppText.fontSemibold,
+        color: Colors.white,
+        fontSize: 15,
+      ),
+      headlineLarge: TextStyle(
+        fontFamily: AppText.fontSemibold,
+        color: AppColor.colorPrimary,
+        fontSize: 20,
       ),
     ),
   );

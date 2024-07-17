@@ -1,4 +1,7 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:json_converter/screens/screen_homepage.dart';
 import 'package:json_converter/utilities/app_color.dart';
 import 'package:json_converter/utilities/app_size.dart';
 import 'package:json_converter/utilities/app_text.dart';
@@ -12,10 +15,22 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   @override
+  void initState() {
+    Timer(const Duration(seconds: 3), () {
+      Navigator.of(context).pushReplacement(
+        MaterialPageRoute(
+          builder: (builder) => const HomepageScreen(),
+        ),
+      );
+    });
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           AppText.welcome,
         ),
       ),
@@ -24,7 +39,7 @@ class _SplashScreenState extends State<SplashScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             // icon as a logo
-            Icon(
+            const Icon(
               Icons.data_object,
               size: 100,
               color: AppColor.colorPrimary,
@@ -39,7 +54,7 @@ class _SplashScreenState extends State<SplashScreen> {
             AppSize.gapH20,
 
             // loader
-            SizedBox(
+            const SizedBox(
               height: 15,
               width: 15,
               child: CircularProgressIndicator(

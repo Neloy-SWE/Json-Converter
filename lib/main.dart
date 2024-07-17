@@ -3,7 +3,7 @@ import 'package:json_converter/screens/screen_splash.dart';
 import 'package:json_converter/utilities/app_text.dart';
 import 'package:json_converter/utilities/app_theme.dart';
 
-void main(){
+void main() {
   runApp(const MyApp());
 }
 
